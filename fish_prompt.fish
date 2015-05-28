@@ -138,12 +138,11 @@ end
 function __prompt_user_host_path -d 'Return user, host and path if needed'
   if [ 'Darwin' = (uname) ]
     echo -n -s (set_color --bold white)' '(set_color normal)
-  end
-  if [ 'Linux' = (uname) ]
-    echo -n -s (set_color --bold white)'Linux '(set_color normal)
+  else if [ 'Linux' = (uname) ]
+    echo -n -s (set_color --bold white)'X '(set_color normal)
   end
 
-  echo -n -s (set_color --bold cyan)(whoami)(set_color normal)
+  echo -n -s (set_color --bold cyan)(whoami | sed -e "s/\b\(.\)/\u\1/g")(set_color normal)
 
   if test -n "$SSH_CONNECTION"
     echo -n -s (set_color white)'@'(set_color normal)
