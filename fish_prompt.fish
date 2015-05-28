@@ -128,9 +128,9 @@ function __prompt_character -d 'Return specific character for prompt'
   else
     if __is_git_repository
       echo -n -s (set_color --bold black)"➥ "(set_color normal)
-    else
-      echo -n -s (set_color --bold black)"in "(set_color normal)
-      # echo -n -s (set_color --bold black)"➜ "(set_color normal)
+    # else
+    #   echo -n -s (set_color --bold black)"in "(set_color normal)
+    #   # echo -n -s (set_color --bold black)"➜ "(set_color normal)
     end
   end
 end
@@ -140,14 +140,15 @@ function __prompt_user_host_path -d 'Return user, host and path if needed'
     echo -n -s (set_color --bold white)' '(set_color normal)
   end
 
-  echo -n -s (set_color --bold cyan)(whoami | sed -e "s/\b\(.\)/\u\1/g")(set_color normal)
-
   if test -n "$SSH_CONNECTION"
-    echo -n -s (set_color white)'@'(set_color normal)
-    echo -n -s (set_color blue)(hostname -f)(set_color normal)
+    # echo -n -s (set_color white)'@'(set_color normal)
+    echo -n -s (set_color --bold white)(hostname -f)' '(set_color normal)
+
     # echo -n -s (set_color blue)(hostname -s)(set_color normal)
     # echo -n -s (set_color --bold black)':'(set_color normal)
   end
+
+  echo -n -s (set_color --bold cyan)(whoami | sed -e "s/\b\(.\)/\u\1/g")(set_color normal)
 
   echo -n -s ' '
 
