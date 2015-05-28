@@ -160,6 +160,12 @@ end
 function __prompt_path -d 'Return prompt path or git repository path'
   if __is_git_repository
     set -l git_repository_location (__git_repository_location)
+
+    if test -n "$SSH_CONNECTION"
+      echo -n -s (set_color --bold white)(hostname -f)(set_color normal)
+      echo -n -s (set_color --bold black)":"(set_color normal)
+    end
+
     echo -n -s (set_color --bold yellow)(pwd | sed "s:$git_repository_location::")(set_color normal)
     # remove last segment (dirname (pwd | sed "s:^$HOME:~:") | sed 's,^\(.*/\)\?\([^/]*\),\2,')
     # end
