@@ -1,6 +1,6 @@
 # fishcloak
 ![](https://img.shields.io/badge/master-0.0.0-yellow.svg?style=flat-square)
-[![](https://img.shields.io/github/issues/cyanpunk/fishcloak.svg?style=flat-square)](https://github.com/cyanpunk/fishcloak/issues)
+[![](https://img.shields.io/github/issues/cyanpunk/theme-fishcloak.svg?style=flat-square)](https://github.com/cyanpunk/theme-fishcloak/issues)
 [![](https://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](http://chevron.mit-license.org)
 
 Clean and informative [Fish-shell](http://fishshell.com/) theme built for [Oh-My-Fish](https://github.com/bpinto/oh-my-fish) framework.
