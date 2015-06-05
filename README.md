@@ -25,5 +25,5 @@ Clean and informative [Fish-shell](http://fishshell.com/) theme built for [Oh-My
 ##### Step #2 — Update fish config file
 `❯ vim ~/.config/fish/config.fish`
 ```fish
-set fish_theme fishcloak
+Theme 'fishcloak'
 ```
