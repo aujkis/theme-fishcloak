@@ -99,8 +99,8 @@ function __node_info -d 'Build NVM prompt info'
     set -l git_repository_package_path (__git_repository_path)"/package.json"
     if test -e $git_repository_package_path
       echo -n -s ' '
-      echo -n -s (set_color --bold green)'⬡ '(set_color normal)#(set_color --bold black)'`'(set_color normal)⬢⬡◊
-      # echo -n -s (set_color --bold white)'node '(set_color normal)
+      echo -n -s (set_color --bold green)'⬡'(set_color normal)#(set_color --bold black)'`'(set_color normal)⬢⬡◊
+      echo -n -s (set_color --bold white)'node '(set_color normal)
       echo -n -s (set_color --bold black)(command node -v | awk '{print substr($1,2); }')(set_color normal)
     end
 
