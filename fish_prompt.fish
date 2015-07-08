@@ -72,12 +72,11 @@ function __git_hash_info -d 'Return latest commit hash info'
     # echo -n -s (set_color --bold black)(__git_branch_name)(set_color normal)
     if [ (command git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") = 0 ]
       set -l git_branch_hash (command git rev-parse --short --verify HEAD)
-      # echo -n -s ' '
-      # echo -n -s (set_color --bold purple)'±'(set_color normal)
-      echo -n -s (set_color --bold purple)'#'(set_color normal)
-      # echo -n -s (set_color --bold white)'git'(set_color normal)
-      # echo -n -s ' '
-      echo -n -s (set_color --bold white)$git_branch_hash(set_color normal)
+      echo -n -s ' '
+      echo -n -s (set_color --bold purple)'±'(set_color normal)
+      echo -n -s (set_color --bold white)'git'(set_color normal)
+      echo -n -s ' '
+      echo -n -s (set_color --bold black)'#'$git_branch_hash(set_color normal)
     end
   end
 end
@@ -100,9 +99,9 @@ function __node_info -d 'Build NVM prompt info'
     set -l git_repository_package_path (__git_repository_path)"/package.json"
     if test -e $git_repository_package_path
       echo -n -s ' '
-      echo -n -s (set_color --bold green)'⬡'(set_color normal)(set_color --bold black)'js'(set_color normal)#⬢⬡◊
+      echo -n -s (set_color --bold green)'⬡ '(set_color normal)#(set_color --bold black)'`'(set_color normal)⬢⬡◊
       # echo -n -s (set_color --bold white)'node '(set_color normal)
-      echo -n -s (set_color --bold white)(command node -v | awk '{print substr($1,2); }')(set_color normal)
+      echo -n -s (set_color --bold black)(command node -v | awk '{print substr($1,2); }')(set_color normal)
     end
 
     #set -l git_repository_sailsrc_path (__git_repository_path)"/.sailsrc"
