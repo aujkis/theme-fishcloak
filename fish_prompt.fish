@@ -77,7 +77,7 @@ function __git_hash_info -d 'Return latest commit hash info'
       echo -n -s (set_color --bold purple)'#'(set_color normal)
       # echo -n -s (set_color --bold white)'git'(set_color normal)
       # echo -n -s ' '
-      echo -n -s (set_color white)$git_branch_hash(set_color normal)
+      echo -n -s (set_color --bold white)$git_branch_hash(set_color normal)
     end
   end
 end
@@ -102,7 +102,7 @@ function __node_info -d 'Build NVM prompt info'
       echo -n -s ' '
       echo -n -s (set_color --bold green)'⬡'(set_color normal)(set_color --bold black)'`'(set_color normal)#⬢⬡◊
       # echo -n -s (set_color --bold white)'node '(set_color normal)
-      echo -n -s (set_color white)(command node -v | awk '{print substr($1,2); }')(set_color normal)
+      echo -n -s (set_color --bold white)(command node -v | awk '{print substr($1,2); }')(set_color normal)
     end
 
     #set -l git_repository_sailsrc_path (__git_repository_path)"/.sailsrc"
