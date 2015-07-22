@@ -23,7 +23,7 @@ Clean and informative [Fish-shell](http://fishshell.com/) theme built for [Oh-My
 `❯ git clone git@github.com:cyanpunk/fishcloak.git ~/.oh-my-fish/themes/fishcloak`
 
 ##### Step #2 — Update fish config file
-`❯ vim ~/.config/fish/config.fish`
+`❯ edit ~/.config/fish/config.fish`
 ```fish
 Theme 'fishcloak'
 ```
