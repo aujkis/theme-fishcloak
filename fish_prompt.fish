@@ -183,7 +183,7 @@ end
 
 function fish_prompt -d 'Define base shell prompt'
   if __is_git_repository
-    printf '%s' (__prompt_character)
+    #printf '%s' (__prompt_character)
     printf '%s' (__prompt_path)
   else
     printf '%s' (__prompt_user_host_path)
