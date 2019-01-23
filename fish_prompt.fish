@@ -198,7 +198,7 @@ function fish_prompt -d 'Define base shell prompt'
 end
 
 function fish_right_prompt -d 'Define additional info in right prompt'
-  printf '%s' (__git_hash_info)
+  #printf '%s' (__git_hash_info)
   #printf '%s' (__ruby_info)
-  printf '%s' (__node_info)
+  #printf '%s' (__node_info)
 end
